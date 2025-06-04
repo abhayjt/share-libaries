@@ -8,7 +8,7 @@ def call(String projectName, String version) {
         sh 'echo $dockerHubPass | docker login -u $dockerHubUser --password-stdin'
 
         echo "Tagging the image for Docker Hub..."
-        sh "docker tag nodeapp:latest ${dockerHubUser}/${projectName}:${version}"
+        //sh "docker tag nodeapp:latest ${dockerHubUser}/${projectName}:${version}"
 
         echo "Pushing the image to Docker Hub..."
         sh "docker push ${dockerHubUser}/${projectName}:${version}"
