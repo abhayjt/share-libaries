@@ -16,3 +16,5 @@ def call(String projectName, String version) {
         echo "Successfully pushed: ${dockerHubUser}/${projectName}:${version}"
     }
 }
+
+ 
